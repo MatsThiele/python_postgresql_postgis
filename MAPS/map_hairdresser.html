@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_64fe85ea7f10f33e4d2fd542a63fec4a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_64fe85ea7f10f33e4d2fd542a63fec4a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_64fe85ea7f10f33e4d2fd542a63fec4a = L.map(
+                "map_64fe85ea7f10f33e4d2fd542a63fec4a",
+                {
+                    center: [47.37707165722384, 8.541184402857143],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_329cdc0de304ddd2e8cc560a47380e19 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_329cdc0de304ddd2e8cc560a47380e19.addTo(map_64fe85ea7f10f33e4d2fd542a63fec4a);
+        
+    
+
+        function geo_json_73af7c32d9c8becedf363b88c0d5c4b4_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_73af7c32d9c8becedf363b88c0d5c4b4 = L.geoJson(null, {
+                onEachFeature: geo_json_73af7c32d9c8becedf363b88c0d5c4b4_onEachFeature,
+            
+            ...{
+  "weight": 0.5,
+  "fillColor": "greenyellow",
+  "fillOpacity": 0.8,
+}
+        });
+
+        function geo_json_73af7c32d9c8becedf363b88c0d5c4b4_add (data) {
+            geo_json_73af7c32d9c8becedf363b88c0d5c4b4
+                .addData(data);
+        }
+            geo_json_73af7c32d9c8becedf363b88c0d5c4b4_add({"bbox": [8.5357165, 47.373807500081696, 8.5454687, 47.3806169000802], "features": [{"bbox": [8.540159099999999, 47.37773990008085, 8.540159099999999, 47.37773990008085], "geometry": {"coordinates": [8.540159099999999, 47.37773990008085], "type": "Point"}, "id": "0", "properties": {"distance_meters": 48.65945843, "name": "Andr\u00e9 Joe Coiffure", "osm_id": 4833061523, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5407058, 47.37708990008098, 8.5407058, 47.37708990008098], "geometry": {"coordinates": [8.5407058, 47.37708990008098], "type": "Point"}, "id": "1", "properties": {"distance_meters": 126.93748951, "name": "Saleh", "osm_id": 4424939145, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5399187, 47.376635300081084, 8.5399187, 47.376635300081084], "geometry": {"coordinates": [8.5399187, 47.376635300081084], "type": "Point"}, "id": "2", "properties": {"distance_meters": 172.641574, "name": "Coiffeur Insieme", "osm_id": 693318659, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5379091, 47.3779077000808, 8.5379091, 47.3779077000808], "geometry": {"coordinates": [8.5379091, 47.3779077000808], "type": "Point"}, "id": "3", "properties": {"distance_meters": 174.98027622, "name": "McCoiffure", "osm_id": 4424939218, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.537875800000002, 47.3774487000809, 8.537875800000002, 47.3774487000809], "geometry": {"coordinates": [8.537875800000002, 47.3774487000809], "type": "Point"}, "id": "4", "properties": {"distance_meters": 192.74767095, "name": "Art Coiffure Kaiser", "osm_id": 4244059289, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.540674899999999, 47.37633050008117, 8.540674899999999, 47.37633050008117], "geometry": {"coordinates": [8.540674899999999, 47.37633050008117], "type": "Point"}, "id": "5", "properties": {"distance_meters": 208.50450028, "name": "Perruso", "osm_id": 7057868108, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5433768, 47.37745610008089, 8.5433768, 47.37745610008089], "geometry": {"coordinates": [8.5433768, 47.37745610008089], "type": "Point"}, "id": "6", "properties": {"distance_meters": 253.51329616, "name": "Coiffure Jnside", "osm_id": 683372578, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.542136099999999, 47.3801660000803, 8.542136099999999, 47.3801660000803], "geometry": {"coordinates": [8.542136099999999, 47.3801660000803], "type": "Point"}, "id": "7", "properties": {"distance_meters": 265.43087841, "name": "Coiffeur-Studio Silvia Baumgartner", "osm_id": 1357158512, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5437784, 47.37840060008069, 8.5437784, 47.37840060008069], "geometry": {"coordinates": [8.5437784, 47.37840060008069], "type": "Point"}, "id": "8", "properties": {"distance_meters": 271.97455151, "name": "Finest Barbers", "osm_id": 5690882409, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.543783399999999, 47.3783604000807, 8.543783399999999, 47.3783604000807], "geometry": {"coordinates": [8.543783399999999, 47.3783604000807], "type": "Point"}, "id": "9", "properties": {"distance_meters": 271.97912987, "name": "Daroma", "osm_id": 5690882408, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.538264299999998, 47.3760834000812, 8.538264299999998, 47.3760834000812], "geometry": {"coordinates": [8.538264299999998, 47.3760834000812], "type": "Point"}, "id": "10", "properties": {"distance_meters": 274.53870856, "name": "Hairstudio 21", "osm_id": 3646016593, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5369503, 47.37931030008048, 8.5369503, 47.37931030008048], "geometry": {"coordinates": [8.5369503, 47.37931030008048], "type": "Point"}, "id": "11", "properties": {"distance_meters": 275.32544982, "name": "McCoiffure", "osm_id": 4833061593, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.543934299999998, 47.378784200080595, 8.543934299999998, 47.378784200080595], "geometry": {"coordinates": [8.543934299999998, 47.378784200080595], "type": "Point"}, "id": "12", "properties": {"distance_meters": 290.55920053, "name": "Finest Barbers", "osm_id": 11806564981, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5441189, 47.378415500080685, 8.5441189, 47.378415500080685], "geometry": {"coordinates": [8.5441189, 47.378415500080685], "type": "Point"}, "id": "13", "properties": {"distance_meters": 297.73282689, "name": "Peter Fischer Coiffure", "osm_id": 11806564989, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.537138599999999, 47.37642780008113, 8.537138599999999, 47.37642780008113], "geometry": {"coordinates": [8.537138599999999, 47.37642780008113], "type": "Point"}, "id": "14", "properties": {"distance_meters": 301.64752187, "name": "Szena Les Coiffeurs", "osm_id": 4906428721, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.542395499999998, 47.3806169000802, 8.542395499999998, 47.3806169000802], "geometry": {"coordinates": [8.542395499999998, 47.3806169000802], "type": "Point"}, "id": "15", "properties": {"distance_meters": 318.23387357, "name": "MSH Salon", "osm_id": 11758825735, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5399862, 47.3751667000814, 8.5399862, 47.3751667000814], "geometry": {"coordinates": [8.5399862, 47.3751667000814], "type": "Point"}, "id": "16", "properties": {"distance_meters": 335.04036117, "name": "Gidor", "osm_id": 693318573, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5404331, 47.3750846000814, 8.5404331, 47.3750846000814], "geometry": {"coordinates": [8.5404331, 47.3750846000814], "type": "Point"}, "id": "17", "properties": {"distance_meters": 344.28921089, "name": "Haar Galerie", "osm_id": 10967922628, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5447253, 47.37904490008055, 8.5447253, 47.37904490008055], "geometry": {"coordinates": [8.5447253, 47.37904490008055], "type": "Point"}, "id": "18", "properties": {"distance_meters": 355.68009812, "name": "Di Giorgio Bambini Coiffeur", "osm_id": 3537752738, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5440397, 47.37628740008115, 8.5440397, 47.37628740008115], "geometry": {"coordinates": [8.5440397, 47.37628740008115], "type": "Point"}, "id": "19", "properties": {"distance_meters": 358.56403062, "name": "Mario Moloca Men\u2019s Concept", "osm_id": 6992745244, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.544858, 47.37905490008055, 8.544858, 47.37905490008055], "geometry": {"coordinates": [8.544858, 47.37905490008055], "type": "Point"}, "id": "20", "properties": {"distance_meters": 365.63070098, "name": "Di Giorgio", "osm_id": 11254437514, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.544420399999998, 47.37632610008115, 8.544420399999998, 47.37632610008115], "geometry": {"coordinates": [8.544420399999998, 47.37632610008115], "type": "Point"}, "id": "21", "properties": {"distance_meters": 379.88612138, "name": "Saleh", "osm_id": 4869996372, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5437328, 47.37573700008127, 8.5437328, 47.37573700008127], "geometry": {"coordinates": [8.5437328, 47.37573700008127], "type": "Point"}, "id": "22", "properties": {"distance_meters": 380.90986675, "name": "McConnell", "osm_id": 656327647, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5357165, 47.37991630008035, 8.5357165, 47.37991630008035], "geometry": {"coordinates": [8.5357165, 47.37991630008035], "type": "Point"}, "id": "23", "properties": {"distance_meters": 389.38305247, "name": "MAD Classic", "osm_id": 10019481848, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5361468, 47.38036870008026, 8.5361468, 47.38036870008026], "geometry": {"coordinates": [8.5361468, 47.38036870008026], "type": "Point"}, "id": "24", "properties": {"distance_meters": 390.75752017, "name": "Curl HQ", "osm_id": 6872100525, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5365986, 47.37545770008131, 8.5365986, 47.37545770008131], "geometry": {"coordinates": [8.5365986, 47.37545770008131], "type": "Point"}, "id": "25", "properties": {"distance_meters": 406.25656743, "name": "The Barber", "osm_id": 4911713622, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5454687, 47.37891950008058, 8.5454687, 47.37891950008058], "geometry": {"coordinates": [8.5454687, 47.37891950008058], "type": "Point"}, "id": "26", "properties": {"distance_meters": 406.94209832, "name": "Creative", "osm_id": 9518880648, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5434277, 47.37507060008142, 8.5434277, 47.37507060008142], "geometry": {"coordinates": [8.5434277, 47.37507060008142], "type": "Point"}, "id": "27", "properties": {"distance_meters": 423.06962812, "name": "Saleh", "osm_id": 4869996371, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.544356299999999, 47.37550680008131, 8.544356299999999, 47.37550680008131], "geometry": {"coordinates": [8.544356299999999, 47.37550680008131], "type": "Point"}, "id": "28", "properties": {"distance_meters": 432.47218484, "name": "Badia Z.", "osm_id": 1967407885, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.536332199999999, 47.37527150008136, 8.536332199999999, 47.37527150008136], "geometry": {"coordinates": [8.536332199999999, 47.37527150008136], "type": "Point"}, "id": "29", "properties": {"distance_meters": 435.10265699, "name": "Extensionpoint \u0026 BlowDry Bar", "osm_id": 4833061646, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5440797, 47.37522810008137, 8.5440797, 47.37522810008137], "geometry": {"coordinates": [8.5440797, 47.37522810008137], "type": "Point"}, "id": "30", "properties": {"distance_meters": 440.09972305, "name": "Coiffeur Niederdorf", "osm_id": 725592749, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5440138, 47.374873400081455, 8.5440138, 47.374873400081455], "geometry": {"coordinates": [8.5440138, 47.374873400081455], "type": "Point"}, "id": "31", "properties": {"distance_meters": 467.12267411, "name": "Strubelpeter", "osm_id": 1981710678, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.540474, 47.373807500081696, 8.540474, 47.373807500081696], "geometry": {"coordinates": [8.540474, 47.373807500081696], "type": "Point"}, "id": "32", "properties": {"distance_meters": 486.25961206, "name": "cuco", "osm_id": 11834522229, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.535936899999998, 47.37483120008149, 8.535936899999998, 47.37483120008149], "geometry": {"coordinates": [8.535936899999998, 47.37483120008149], "type": "Point"}, "id": "33", "properties": {"distance_meters": 491.56076809, "name": "Gidor", "osm_id": 3085756534, "shop": "hairdresser"}, "type": "Feature"}, {"bbox": [8.5435874, 47.37438190008159, 8.5435874, 47.37438190008159], "geometry": {"coordinates": [8.5435874, 47.37438190008159], "type": "Point"}, "id": "34", "properties": {"distance_meters": 493.73988358, "name": "PerfectHair.ch", "osm_id": 2822385924, "shop": "hairdresser"}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_73af7c32d9c8becedf363b88c0d5c4b4.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+    geo_json_73af7c32d9c8becedf363b88c0d5c4b4.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name"];
+    let aliases = ["name"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_73af7c32d9c8becedf363b88c0d5c4b4.addTo(map_64fe85ea7f10f33e4d2fd542a63fec4a);
+        
+    
+            var layer_control_506be6ed4f28d551d4dcfb4e5dccb36d_layers = {
+                base_layers : {
+                    "esriworldimagery" : tile_layer_329cdc0de304ddd2e8cc560a47380e19,
+                },
+                overlays :  {
+                    "map" : geo_json_73af7c32d9c8becedf363b88c0d5c4b4,
+                },
+            };
+            let layer_control_506be6ed4f28d551d4dcfb4e5dccb36d = L.control.layers(
+                layer_control_506be6ed4f28d551d4dcfb4e5dccb36d_layers.base_layers,
+                layer_control_506be6ed4f28d551d4dcfb4e5dccb36d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_64fe85ea7f10f33e4d2fd542a63fec4a);
+
+        
+</script>
+</html>
