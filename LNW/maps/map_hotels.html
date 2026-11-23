@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_df799ac4389520a011c978361e4a7547 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_df799ac4389520a011c978361e4a7547" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_df799ac4389520a011c978361e4a7547 = L.map(
+                "map_df799ac4389520a011c978361e4a7547",
+                {
+                    center: [47.439125258890776, 8.560526358823529],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3dc2e5f0190feadc0305bff074dbed27 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3dc2e5f0190feadc0305bff074dbed27.addTo(map_df799ac4389520a011c978361e4a7547);
+        
+    
+
+        function geo_json_22c73b9ae15b5bd16c9c0e637d0350ec_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_22c73b9ae15b5bd16c9c0e637d0350ec = L.geoJson(null, {
+                onEachFeature: geo_json_22c73b9ae15b5bd16c9c0e637d0350ec_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_22c73b9ae15b5bd16c9c0e637d0350ec_add (data) {
+            geo_json_22c73b9ae15b5bd16c9c0e637d0350ec
+                .addData(data);
+        }
+            geo_json_22c73b9ae15b5bd16c9c0e637d0350ec_add({"bbox": [8.537154999999998, 47.40843810007406, 8.584256699999997, 47.49190050005547], "features": [{"bbox": [8.5601844, 47.450562200064724, 8.5601844, 47.450562200064724], "geometry": {"coordinates": [8.5601844, 47.450562200064724], "type": "Point"}, "id": "0", "properties": {"distance_meters": 139.2126576, "name": "Transit Hotel \u0026 Dayrooms", "osm_id": 8607233055, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5626989, 47.452039000064396, 8.5626989, 47.452039000064396], "geometry": {"coordinates": [8.5626989, 47.452039000064396], "type": "Point"}, "id": "1", "properties": {"distance_meters": 223.8378609, "name": "Capsule Hotel Alpine Garden", "osm_id": 9553976171, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.565588, 47.43871790006734, 8.565588, 47.43871790006734], "geometry": {"coordinates": [8.565588, 47.43871790006734], "type": "Point"}, "id": "2", "properties": {"distance_meters": 1295.66686828, "name": "Dorint Airport-Hotel Z\u00fcrich", "osm_id": 3086649239, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.567465699999998, 47.439010100067264, 8.567465699999998, 47.439010100067264], "geometry": {"coordinates": [8.567465699999998, 47.439010100067264], "type": "Point"}, "id": "3", "properties": {"distance_meters": 1302.47079219, "name": "STAY@Zurich Airport", "osm_id": 3783549518, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5815998, 47.44914290006502, 8.5815998, 47.44914290006502], "geometry": {"coordinates": [8.5815998, 47.44914290006502], "type": "Point"}, "id": "4", "properties": {"distance_meters": 1489.47836902, "name": "Welcome Inn", "osm_id": 6286669885, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.582782, 47.44946640006494, 8.582782, 47.44946640006494], "geometry": {"coordinates": [8.582782, 47.44946640006494], "type": "Point"}, "id": "5", "properties": {"distance_meters": 1576.39870368, "name": "Sleepz", "osm_id": 12072254954, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5737323, 47.43830580006743, 8.5737323, 47.43830580006743], "geometry": {"coordinates": [8.5737323, 47.43830580006743], "type": "Point"}, "id": "6", "properties": {"distance_meters": 1586.15008581, "name": "Apart-Hotel Z\u00fcrich by Hilton", "osm_id": 4269704591, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.540141999999998, 47.450988000064605, 8.540141999999998, 47.450988000064605], "geometry": {"coordinates": [8.540141999999998, 47.450988000064605], "type": "Point"}, "id": "7", "properties": {"distance_meters": 1643.83163589, "name": "Radisson Hotel Zurich Airport", "osm_id": 291687394, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.584256699999997, 47.45007010006479, 8.584256699999997, 47.45007010006479], "geometry": {"coordinates": [8.584256699999997, 47.45007010006479], "type": "Point"}, "id": "8", "properties": {"distance_meters": 1686.03268285, "name": "Fly away", "osm_id": 6286669886, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.537154999999998, 47.45185610006442, 8.537154999999998, 47.45185610006442], "geometry": {"coordinates": [8.537154999999998, 47.45185610006442], "type": "Point"}, "id": "9", "properties": {"distance_meters": 1876.29720207, "name": "Holiday Inn Express Z\u00fcrich Airport", "osm_id": 1060256103, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5668924, 47.43145500006896, 8.5668924, 47.43145500006896], "geometry": {"coordinates": [8.5668924, 47.43145500006896], "type": "Point"}, "id": "10", "properties": {"distance_meters": 2106.86639684, "name": "Welcome Homes", "osm_id": 2030250479, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5591311, 47.42251730007095, 8.5591311, 47.42251730007095], "geometry": {"coordinates": [8.5591311, 47.42251730007095], "type": "Point"}, "id": "11", "properties": {"distance_meters": 3073.73156283, "name": "Kameha Grand Z\u00fcrich", "osm_id": 3707251809, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.558813899999999, 47.41581940007243, 8.558813899999999, 47.41581940007243], "geometry": {"coordinates": [8.558813899999999, 47.41581940007243], "type": "Point"}, "id": "12", "properties": {"distance_meters": 3818.39661886, "name": "Ibis Z\u00fcrich Messe Airport", "osm_id": 9939566045, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5412445, 47.41430090007276, 8.5412445, 47.41430090007276], "geometry": {"coordinates": [8.5412445, 47.41430090007276], "type": "Point"}, "id": "13", "properties": {"distance_meters": 4274.28538832, "name": "Courtyard Z\u00fcrich Nord", "osm_id": 1573053765, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.553047099999999, 47.410539700073585, 8.553047099999999, 47.410539700073585], "geometry": {"coordinates": [8.553047099999999, 47.410539700073585], "type": "Point"}, "id": "14", "properties": {"distance_meters": 4448.7052282, "name": "Holiday Inn Z\u00fcrich Messe", "osm_id": 701734717, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5477574, 47.49190050005547, 8.5477574, 47.49190050005547], "geometry": {"coordinates": [8.5477574, 47.49190050005547], "type": "Point"}, "id": "15", "properties": {"distance_meters": 4768.10253698, "name": "Gasthof Hecht", "osm_id": 5309146824, "tourism": "hotel"}, "type": "Feature"}, {"bbox": [8.5464569, 47.40843810007406, 8.5464569, 47.40843810007406], "geometry": {"coordinates": [8.5464569, 47.40843810007406], "type": "Point"}, "id": "16", "properties": {"distance_meters": 4776.22231902, "name": "Hotel Sternen Oerlikon", "osm_id": 4202335108, "tourism": "hotel"}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_22c73b9ae15b5bd16c9c0e637d0350ec.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+    geo_json_22c73b9ae15b5bd16c9c0e637d0350ec.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name"];
+    let aliases = ["name"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_22c73b9ae15b5bd16c9c0e637d0350ec.addTo(map_df799ac4389520a011c978361e4a7547);
+        
+    
+            var layer_control_84abf186284b5b120a723fa3ee1fe2ba_layers = {
+                base_layers : {
+                    "esriworldimagery" : tile_layer_3dc2e5f0190feadc0305bff074dbed27,
+                },
+                overlays :  {
+                    "map" : geo_json_22c73b9ae15b5bd16c9c0e637d0350ec,
+                },
+            };
+            let layer_control_84abf186284b5b120a723fa3ee1fe2ba = L.control.layers(
+                layer_control_84abf186284b5b120a723fa3ee1fe2ba_layers.base_layers,
+                layer_control_84abf186284b5b120a723fa3ee1fe2ba_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_df799ac4389520a011c978361e4a7547);
+
+        
+</script>
+</html>
